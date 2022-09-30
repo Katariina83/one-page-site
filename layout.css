@@ -1,0 +1,260 @@
+/*Mobile first*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  background-color: #333333;
+}
+
+/* Navigointipalkin säännöt */
+.navigointi {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Vanhemman säännöt */
+.navigointi ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    margin: 0;
+    background-color:black;
+  }
+  
+  /* Lapsien säännöt*/
+.navigointi ul li {
+      flex-grow: 1;
+      flex-basis: 0;
+      text-align: center;
+      font-size: 2rem;
+}
+
+.navigointi ul .tupla {
+      flex-grow: 2;
+      text-align: left;
+}
+
+  li a {
+    display: block;
+    color: white;
+    padding: 2rem 3rem;
+    text-decoration: none;
+  }
+  
+  .active {
+    background-color: black;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-basis: 0;
+  }
+
+  #portfolio {
+    background-image: url("https://source.unsplash.com/1600x900/?city,night");
+    padding: 2rem;
+    margin: 2rem;
+    margin-top: 8rem;
+}
+
+  .tausta {
+    color: orange;
+    background-color: rgba(0, 0, 0, 0.616);
+    margin: 2rem;
+    padding: 2rem;
+}
+
+  #menneisyys {
+      background-color: white;
+      color: black;
+      padding: 1rem;
+      margin: 2rem;
+      font-weight: 400;
+  }
+
+  #menneisyys > * {
+   padding: 0.5rem;
+   font-size: 2rem;
+   font-weight: 600;
+  }
+
+  #nykyisyys {
+    border-top: 0.2rem solid grey;  /* Väliviiva */
+    background-color: #333333;
+    color: white;
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  #tulevaisuus {
+    border-top: 0.2rem solid grey;
+    background-color: #333333;
+    color:white;
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  #yhteystiedot {
+    border-top: 0.2rem solid grey;
+    border-bottom: 0.2rem solid lightgrey;
+    background-color: #333333;
+    color: white;
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  article {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  footer {
+    color: white;
+    padding: 0rem 2rem 2rem; /*alas oikealle*/
+  }
+
+  h1 {
+      font-size: 2rem;
+      padding-bottom: 2rem;
+      color: orange;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      color: white;
+      flex-direction: column;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      flex-basis: 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: ridge;
+    border-radius: 1rem;
+  }
+
+  .card-title {
+    padding-left: 0.5rem;
+  }
+
+  .card-text {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  #otsikko1 {
+    color: black;
+  }
+
+  #otsikko2 {
+    color: black;
+  }
+
+  #otsikko3 {
+    color: black;
+  }
+
+  .form-example label {
+    display: inline-block;
+    width: 10rem; /*vastausikkunoiden etäisyys teksteistä "Nimi"*/
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .form-example input {
+    display: inline-block;
+    width: 30rem;  /*vastausikkunoiden leveys*/
+    margin-bottom: 1rem;
+  }
+
+  .form-example .button {
+    width: 8rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: orange;
+    color: white;
+    margin-left: 11rem;
+  }
+
+  /* Menneisyyden card -rakenne */
+  .container {
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .container > * {
+    flex-grow: 1;
+    flex-basis: 100%;
+  }
+
+  .menneisyys-kortit {
+    padding: 1rem;
+  }
+
+  figure img {
+    max-width: 100%;
+  }
+  
+  .left {
+    float: right;
+    margin-left: 1rem;
+    width: 25rem;
+  }
+
+  .right {
+    float: left;
+    margin-right: 1rem;
+    width: 25rem;
+  }
+
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  /* Media query Tabletti näkymä */
+  @media screen and (min-width: 426px) {
+    body {
+    }
+    .container > * {
+      flex-basis: 0;
+    }
+
+    .form-example .button {
+      margin-left: 21rem;
+    }
+  }
+
+  /* Media query Desktop näkymä */
+  @media screen and (min-width: 769px) {
+    body {
+    }
+
+    .form-example .button {
+      margin-left: 21rem;
+    }
+  }
